@@ -22,13 +22,6 @@ position = Vector2( 635.321, 285.831 )
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 66.4358, 284.041 )
 
-[node name="House1" type="Sprite" parent="."]
-position = Vector2( -25.8471, 24.4867 )
-texture = ExtResource( 5 )
-
-[node name="House2" type="Sprite" parent="."]
-position = Vector2( 488.51, 10.2708 )
-texture = ExtResource( 5 )
 [editable path="Conversation"]
 
 [editable path="Player"]
