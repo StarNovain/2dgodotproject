@@ -19,11 +19,6 @@ config/name="arizona"
 run/main_scene="res://scenes/Game.tscn"
 config/icon="res://icon.png"
 
-[autoload]
-
-Health="*res://scripts/Health.cs"
-Guilt="*res://scripts/Guilt.cs"
-
 [display]
 
 window/size/width=960
@@ -60,4 +55,5 @@ move_right={
 
 [rendering]
 
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"
