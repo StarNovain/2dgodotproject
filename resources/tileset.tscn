@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=2]
+
+[sub_resource type="OpenSimplexNoise" id=1]
+period = 9.0
+persistence = 1.0
+
+[sub_resource type="NoiseTexture" id=2]
+width = 64
+height = 64
+seamless = true
+noise = SubResource( 1 )
+
+[sub_resource type="OpenSimplexNoise" id=3]
+period = 14.8
+persistence = 0.662
+
+[sub_resource type="NoiseTexture" id=4]
+width = 64
+height = 64
+seamless = true
+noise = SubResource( 3 )
+
+[sub_resource type="OpenSimplexNoise" id=5]
+period = 256.0
+
+[sub_resource type="NoiseTexture" id=6]
+width = 64
+height = 64
+seamless = true
+noise = SubResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 32, 32 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="square" type="Sprite" parent="."]
+modulate = Color( 0.709804, 0.756863, 1, 1 )
+position = Vector2( 32.5698, 31.7336 )
+texture = SubResource( 2 )
+
+[node name="dirt" type="Sprite" parent="."]
+modulate = Color( 0.945098, 0.556863, 0.556863, 1 )
+position = Vector2( 97.8402, 32.1953 )
+texture = SubResource( 4 )
+
+[node name="walls" type="Sprite" parent="."]
+position = Vector2( 163.67, 32.6836 )
+texture = SubResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D"]
+shape = SubResource( 7 )

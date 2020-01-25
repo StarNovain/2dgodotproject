@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+margin_left = 22.1607
+margin_top = 528.532
+margin_right = 1046.16
+margin_bottom = 568.532
