@@ -3,3 +3,8 @@ C:\Users\thege\Documents\2dgodotproject\.mono\temp\bin\Tools\arizona.pdb
 C:\Users\thege\Documents\2dgodotproject\.mono\temp\obj\Tools\arizona.csprojAssemblyReference.cache
 C:\Users\thege\Documents\2dgodotproject\.mono\temp\obj\Tools\arizona.dll
 C:\Users\thege\Documents\2dgodotproject\.mono\temp\obj\Tools\arizona.pdb
+C:\Users\inter\Documents\2dgodotproject\.mono\temp\obj\Tools\arizona.csprojAssemblyReference.cache
+C:\Users\inter\Documents\2dgodotproject\.mono\temp\obj\Tools\arizona.dll
+C:\Users\inter\Documents\2dgodotproject\.mono\temp\obj\Tools\arizona.pdb
+C:\Users\inter\Documents\2dgodotproject\.mono\temp\bin\Tools\arizona.dll
+C:\Users\inter\Documents\2dgodotproject\.mono\temp\bin\Tools\arizona.pdb
