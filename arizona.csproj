@@ -49,6 +49,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="assets\bullet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="scripts\Conversation.cs" />
     <Compile Include="scripts\Global.cs" />
