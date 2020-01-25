@@ -49,8 +49,11 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Guilt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="scenes\Health.cs" />
+    <Compile Include="scenes\GuiltBar.cs" />
+    <Compile Include="scripts\Health.cs" />
+    <Compile Include="scenes\HealthBar.cs" />
     <Compile Include="scripts\Health.cs" />
     <Compile Include="scenes\CombatPlayer.cs" />
     <Compile Include="scripts\Player.cs" />
