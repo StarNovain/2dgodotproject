@@ -5,17 +5,17 @@
 [sub_resource type="OpenSimplexNoise" id=1]
 seed = 2
 octaves = 1
-period = 2.0
-persistence = 0.591
+period = 3.0
+persistence = 0.688
 lacunarity = 2.71
 
 [sub_resource type="NoiseTexture" id=2]
 width = 64
-height = 64
+height = 128
 noise = SubResource( 1 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 32, 32 )
+extents = Vector2( 32, 64 )
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
