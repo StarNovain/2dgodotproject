@@ -21,5 +21,3 @@ position = Vector2( 635.321, 285.831 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 66.4358, 284.041 )
-
-[editable path="Player"]

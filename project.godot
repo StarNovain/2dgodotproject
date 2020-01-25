@@ -19,10 +19,6 @@ config/name="arizona"
 run/main_scene="res://scenes/Game.tscn"
 config/icon="res://icon.png"
 
-[autoload]
-
-Health="*res://scripts/Health.cs"
-
 [display]
 
 window/size/width=960

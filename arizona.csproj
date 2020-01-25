@@ -50,9 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="scenes\Health.cs" />
+    <Compile Include="scripts\Combat.cs" />
     <Compile Include="scripts\Health.cs" />
-    <Compile Include="scenes\CombatPlayer.cs" />
+    <Compile Include="scripts\CombatPlayer.cs" />
     <Compile Include="scripts\Player.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
