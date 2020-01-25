@@ -54,8 +54,8 @@
     <Compile Include="scenes\GuiltBar.cs" />
     <Compile Include="scripts\Health.cs" />
     <Compile Include="scenes\HealthBar.cs" />
-    <Compile Include="scripts\Health.cs" />
-    <Compile Include="scenes\CombatPlayer.cs" />
+    <Compile Include="scripts\Combat.cs" />
+    <Compile Include="scripts\CombatPlayer.cs" />
     <Compile Include="scripts\Player.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
