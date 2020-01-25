@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/GUI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/tileset.res" type="TileSet" id=2]
 [ext_resource path="res://scenes/Conversation.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/house.PNG" type="Texture" id=5]
 
 [node name="Game" type="Node2D"]
 
@@ -21,3 +22,7 @@ position = Vector2( 635.321, 285.831 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 66.4358, 284.041 )
+
+[node name="House1" type="Sprite" parent="."]
+position = Vector2( -25.8471, 24.4867 )
+texture = ExtResource( 5 )
