@@ -49,8 +49,8 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="scripts\Global.cs"/>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="scripts\Global.cs" />
     <Compile Include="scripts\GuiltBar.cs" />
     <Compile Include="scripts\HealthBar.cs" />
     <Compile Include="scripts\Combat.cs" />
