@@ -10,11 +10,13 @@ margin_left = 1.0
 margin_right = 1.0
 
 [node name="HealthBar" type="TextureProgress" parent="."]
-margin_right = 40.0
+margin_top = 1.0
+margin_right = 39.0
 margin_bottom = 40.0
 script = ExtResource( 1 )
 
 [node name="GuiltBar" type="TextureProgress" parent="."]
+margin_top = 1.0
 margin_right = 40.0
-margin_bottom = 40.0
+margin_bottom = 41.0
 script = ExtResource( 2 )
