@@ -31,3 +31,6 @@ texture = ExtResource( 5 )
 [node name="House2" type="Sprite" parent="."]
 position = Vector2( 488.51, 10.2708 )
 texture = ExtResource( 5 )
+[editable path="Conversation"]
+
+[editable path="Player"]
