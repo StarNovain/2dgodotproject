@@ -49,11 +49,16 @@ margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 2 )
 
-[node name="Knife" type="AnimatedSprite" parent="."]
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 352, 485 )
+
+[node name="Knife" type="AnimatedSprite" parent="Node2D"]
+position = Vector2( 256, 0 )
 frames = SubResource( 1 )
 
-[node name="Shield" type="AnimatedSprite" parent="."]
+[node name="Shield" type="AnimatedSprite" parent="Node2D"]
+position = Vector2( 128, 0 )
 frames = SubResource( 2 )
 
-[node name="Negate" type="AnimatedSprite" parent="."]
+[node name="Negate" type="AnimatedSprite" parent="Node2D"]
 frames = SubResource( 3 )
