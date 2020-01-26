@@ -55,6 +55,7 @@ public class CombatPlayer : KinematicBody2D
                 GD.Print(global.health);
                 GD.Print(collider.Get("DAMAGE"));
                 global.health -= (float) collider.Get("DAMAGE");
+                collider.QueueFree();
                 EmitSignal("UpdateHealth");
             }
         }
