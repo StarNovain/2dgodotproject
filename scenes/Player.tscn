@@ -1,30 +1,28 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Player.cs" type="Script" id=1]
+[ext_resource path="res://assets/side-still.png" type="Texture" id=2]
+[ext_resource path="res://assets/side-1.png" type="Texture" id=3]
 
-[sub_resource type="OpenSimplexNoise" id=1]
-seed = 2
-octaves = 1
-period = 3.0
-persistence = 0.688
-lacunarity = 2.71
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk_x",
+"speed": 5.0
+} ]
 
-[sub_resource type="NoiseTexture" id=2]
-width = 64
-height = 128
-noise = SubResource( 1 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 32, 64 )
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 32, 32 )
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 0.568627, 1, 0.564706, 1 )
-texture = SubResource( 2 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "walk_x"
 
-[node name="Camera2D" type="Camera2D" parent="Sprite"]
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite"]
 current = true
 smoothing_enabled = true
 drag_margin_left = 0.01
@@ -33,4 +31,5 @@ drag_margin_right = 0.01
 drag_margin_bottom = 0.01
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 3 )
+position = Vector2( 0, 32 )
+shape = SubResource( 4 )

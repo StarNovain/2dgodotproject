@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/cobblestone.PNG" type="Texture" id=1]
 [ext_resource path="res://assets/grass.PNG" type="Texture" id=2]
 [ext_resource path="res://assets/path.PNG" type="Texture" id=3]
+[ext_resource path="res://assets/path_left.PNG" type="Texture" id=4]
 
 [sub_resource type="OpenSimplexNoise" id=1]
 period = 9.0
@@ -69,3 +70,7 @@ texture = ExtResource( 2 )
 [node name="path" type="Sprite" parent="."]
 position = Vector2( 231.518, 97.5352 )
 texture = ExtResource( 3 )
+
+[node name="path_left" type="Sprite" parent="."]
+position = Vector2( 236.622, 170.641 )
+texture = ExtResource( 4 )
