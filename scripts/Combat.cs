@@ -34,20 +34,21 @@ public class Combat : Node2D
         time = time + delta;
         diff += delta;
         if (phase == 1) {
-
-            if (diff > 0.25){
+            if (diff > 0.33){
                 diff -= 0.25f;
                 AddChild((KinematicBody2D)bullet.Instance());
             }
         }
         else if (phase == 2) {
-            AddChild((KinematicBody2D)bullet.Instance());
-            AddChild((KinematicBody2D)bullet.Instance());
-            AddChild((KinematicBody2D)bullet.Instance());
-            AddChild((KinematicBody2D)bullet.Instance());
+            if (diff > 0.25){
+                diff -= 0.25f;
+                AddChild((KinematicBody2D)bullet.Instance());
+            }
+            //Add fist code
         }
         if (time == 15) {
-            
+            diff = 0;
+            phase = 2;
         }
     }
 }
