@@ -24,7 +24,7 @@ public class Bullet : Damager
         var CombatP = (Node2D) GetParent().GetNode("CombatPlayer");
         pPos = CombatP.GetPosition();
         Random xPos = new Random();
-        this.Position.Set(xPos.Next(0,960),0);
+        this.SetPosition(new Vector2(xPos.Next(0,960),0));
         
         vector = (pPos - this.GetPosition()).Normalized();
     }

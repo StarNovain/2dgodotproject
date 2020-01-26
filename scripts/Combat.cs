@@ -10,6 +10,7 @@ public class Combat : Node2D
     PackedScene bullet, claw;
     int phase;
     float time;
+    float diff;
     public override void _Ready()
     {
 
@@ -23,16 +24,21 @@ public class Combat : Node2D
 
             phase = 1;
             time = 0;
+            diff = 0;
+            
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
+        time = time + delta;
+        diff += delta;
         if (phase == 1) {
-            AddChild((KinematicBody2D)bullet.Instance());
-            AddChild((KinematicBody2D)bullet.Instance());
-            AddChild((KinematicBody2D)bullet.Instance());
-            time = time + delta;
+
+            if (diff > 0.25){
+                diff -= 0.25f;
+                AddChild((KinematicBody2D)bullet.Instance());
+            }
         }
         else if (phase == 2) {
             AddChild((KinematicBody2D)bullet.Instance());
