@@ -79,7 +79,6 @@ centered = false
 position = Vector2( 352, 485 )
 
 [node name="Knife" type="AnimatedSprite" parent="Node2D"]
-position = Vector2( 256, 0 )
 frames = SubResource( 1 )
 
 [node name="Shield" type="AnimatedSprite" parent="Node2D"]
@@ -87,4 +86,5 @@ position = Vector2( 128, 0 )
 frames = SubResource( 2 )
 
 [node name="Negate" type="AnimatedSprite" parent="Node2D"]
+position = Vector2( 256, 0 )
 frames = SubResource( 3 )

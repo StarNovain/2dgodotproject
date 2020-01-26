@@ -17,12 +17,16 @@ public class Claw : Damager
         Vector2 pPos = CombatP.GetPosition();
         GD.Print(pPos.x,pPos.y); 
         this.SetPosition(pPos);
+        this.Monitorable = false;
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
         AnimatedSprite.Play("default");
+        if(AnimatedSprite.Frame >= 14){
+            this.Monitorable = true;
+        }
         if (AnimatedSprite.Frame >= 24) {
             this.QueueFree();
         }

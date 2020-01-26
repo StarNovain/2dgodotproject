@@ -7,24 +7,27 @@ public class Combat : Node2D
     // private string b = "text";
 
     // Called when the node enters the scene tree for the first time.
-    PackedScene bullet, claw;
+    PackedScene bullet, claw,fist;
     int phase;
     float time;
     float diff;
+    Boolean alternate;
     public override void _Ready()
     {
 
             bullet = (PackedScene)ResourceLoader.Load("res://scenes/Bullet.tscn");
-            KinematicBody2D newbullet = (KinematicBody2D)bullet.Instance();
+            Area2D newbullet = (Area2D)bullet.Instance();
             //AddChild(newbullet);
 
             claw = (PackedScene)ResourceLoader.Load("res://scenes/Claw.tscn");
-            KinematicBody2D newclaw = (KinematicBody2D)claw.Instance();
+            Area2D newclaw = (Area2D)claw.Instance();
+            fist = (PackedScene)ResourceLoader.Load("res://scenes/Fist.tscn");
             //AddChild(newclaw);
 
             phase = 1;
             time = 0;
             diff = 0;
+            alternate = false;
             
     }
 
@@ -37,17 +40,27 @@ public class Combat : Node2D
 
             if (diff > 0.25){
                 diff -= 0.25f;
-                AddChild((KinematicBody2D)bullet.Instance());
+                AddChild((Area2D)bullet.Instance());
             }
         }
         else if (phase == 2) {
-            AddChild((KinematicBody2D)bullet.Instance());
-            AddChild((KinematicBody2D)bullet.Instance());
-            AddChild((KinematicBody2D)bullet.Instance());
-            AddChild((KinematicBody2D)bullet.Instance());
+            if (diff > 0.18){
+                diff -= 0.18f;
+                AddChild((Area2D)bullet.Instance());
+            }
+            if (time >= 5){
+                time -= 3;
+                if(alternate){
+                    AddChild((Area2D)fist.Instance());
+                } else{
+                    AddChild((Area2D)claw.Instance());
+                }
+                alternate = !alternate;
+            }
         }
-        if (time == 15) {
-            
+        if (time >= 5) {
+            phase = 2;
+
         }
     }
 }

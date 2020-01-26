@@ -13,11 +13,13 @@ public class CombatPlayer : KinematicBody2D
     Global global;
     AnimatedSprite sprite;
     Vector2 velocity;
+    Area2D hitbox;
     public override void _Ready()
     {
         AddUserSignal("UpdateHealth");
         global = (Global)GetNode("/root/Global");
         sprite = (AnimatedSprite) GetNode("AnimatedSprite");
+        hitbox = (Area2D) GetNode("hitbox");
         velocity = new Vector2();
     }
 
@@ -47,15 +49,17 @@ public class CombatPlayer : KinematicBody2D
     {
         getInput();
         MoveAndSlide(velocity.Normalized() * 200);
-        for(int i = 0; i < GetSlideCount() -1;i++){
-            var collision = (KinematicCollision2D) GetSlideCollision(i);
-            var collider = ((Node2D) collision.GetCollider());
-            if(collider.IsInGroup("lethal")){
-                GD.Print("lethal body");
+        var overlappingAreas = hitbox.GetOverlappingAreas();
+        for(int i = 0; i < overlappingAreas.Count;i++){
+            var area = (Area2D) overlappingAreas[i];
+            if(area.IsInGroup("lethal")){
+                GD.Print("lethal area");
                 GD.Print(global.health);
-                GD.Print(collider.Get("DAMAGE"));
-                global.health -= (float) collider.Get("DAMAGE");
-                collider.QueueFree();
+                GD.Print(area.Get("DAMAGE"));
+                global.health -= (float) area.Get("DAMAGE");
+                if(area.IsInGroup("despawn")){
+                    area.QueueFree();
+                }
                 EmitSignal("UpdateHealth");
             }
         }
