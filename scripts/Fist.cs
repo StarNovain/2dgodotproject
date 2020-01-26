@@ -7,7 +7,7 @@ public class Fist : Damager
     // private int a = 2;
     // private string b = "text";
     [Export]
-    public float DAMAGE;
+    public float DAMAGE = 15;
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {

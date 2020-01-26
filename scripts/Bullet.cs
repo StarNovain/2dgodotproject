@@ -9,7 +9,7 @@ public class Bullet : Damager
 
     // Called when the node enters the scene tree for the first time.
     [Export]
-    public float DAMAGE = 3;
+    public float DAMAGE = 5;
     Vector2 vector;
     Vector2 pPos;
     const float SPEED = 250;
