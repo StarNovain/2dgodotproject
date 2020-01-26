@@ -36,7 +36,10 @@ animations = [ {
 "speed": 16.0
 } ]
 
-[node name="Claw" type="KinematicBody2D"]
+
+[node name="Claw" type="KinematicBody2D" groups=[
+"lethal",
+]]
 position = Vector2( 659.283, 168.776 )
 script = ExtResource( 1 )
 
