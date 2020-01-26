@@ -36,14 +36,25 @@ animations = [ {
 "speed": 16.0
 } ]
 
+<<<<<<< HEAD
 [node name="Claw" type="KinematicBody2D" groups=[
 "lethal",
 ]]
+=======
+[node name="Claw" type="KinematicBody2D"]
+position = Vector2( 659.283, 168.776 )
+>>>>>>> 81242a25745aa0e906ff1b5a902e437bebef84d7
 script = ExtResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( 152.059, -12.4753, 82.6055, -93.3048, -111.984, -54.9857, -161.08, 63.5642, -82.0471, 115.056, 55.6624, 103.081 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 frame = 21
+__meta__ = {
+"_edit_lock_": true
+}
