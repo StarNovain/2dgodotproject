@@ -49,6 +49,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="scenes\GUI.cs" />
     <Compile Include="scripts\damager.cs" />
     <Compile Include="assets\bullet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
