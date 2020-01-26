@@ -1,13 +1,15 @@
 using Godot;
 using System;
 
-public class Bullet : KinematicBody2D
+public class Bullet : Damager
 {
     // Declare member variables here. Examples:
     // private int a = 2;
     // private string b = "text";
 
     // Called when the node enters the scene tree for the first time.
+    [Export]
+    public float DAMAGE = 3;
     Vector2 vector;
     Vector2 pPos;
     const float SPEED = 250;

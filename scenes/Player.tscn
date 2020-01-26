@@ -12,7 +12,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32, 32 )
 
 [node name="Player" type="KinematicBody2D"]
@@ -32,4 +32,4 @@ drag_margin_bottom = 0.01
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 32 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )

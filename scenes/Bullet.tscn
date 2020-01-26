@@ -6,7 +6,9 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 7.11354
 
-[node name="Bullet" type="KinematicBody2D"]
+[node name="Bullet" type="KinematicBody2D" groups=[
+"lethal",
+]]
 position = Vector2( 0, -1 )
 script = ExtResource( 1 )
 
