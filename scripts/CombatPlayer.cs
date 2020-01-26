@@ -16,6 +16,7 @@ public class CombatPlayer : KinematicBody2D
     public override void _Ready()
     {
         AddUserSignal("UpdateHealth");
+        global = (Global)GetNode("/root/Global");
         sprite = (AnimatedSprite) GetNode("AnimatedSprite");
         velocity = new Vector2();
     }
@@ -48,10 +49,12 @@ public class CombatPlayer : KinematicBody2D
         MoveAndSlide(velocity.Normalized() * 200);
         for(int i = 0; i < GetSlideCount() -1;i++){
             var collision = (KinematicCollision2D) GetSlideCollision(i);
-            var collider = ((Node) collision.GetCollider());
+            var collider = ((Node2D) collision.GetCollider());
             if(collider.IsInGroup("lethal")){
-                var damager = (Damager) collider;
-                global.health -= damager.DAMAGE;
+                GD.Print("lethal body");
+                GD.Print(global.health);
+                GD.Print(collider.Get("DAMAGE"));
+                global.health -= (float) collider.Get("DAMAGE");
                 EmitSignal("UpdateHealth");
             }
         }
