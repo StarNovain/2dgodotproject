@@ -10,7 +10,6 @@ public class Claw : Damager
 
     // Called when the node enters the scene tree for the first time.
     AnimatedSprite AnimatedSprite;
-    int frpos;
     public override void _Ready()
     {
         AnimatedSprite = (AnimatedSprite) GetNode("AnimatedSprite");
@@ -18,15 +17,13 @@ public class Claw : Damager
         Vector2 pPos = CombatP.GetPosition();
         GD.Print(pPos.x,pPos.y); 
         this.SetPosition(pPos);
-        frpos = 0;
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
         AnimatedSprite.Play("default");
-        frpos = frpos + 1;
-        if (frpos >= 24) {
+        if (AnimatedSprite.Frame >= 25) {
             AnimatedSprite.Stop();
         }
     }
