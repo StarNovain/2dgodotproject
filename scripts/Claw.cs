@@ -16,7 +16,7 @@ public class Claw : KinematicBody2D
         var CombatP = (Node2D) GetParent().GetNode("CombatPlayer");
         Vector2 pPos = CombatP.GetPosition();
         GD.Print(pPos.x,pPos.y); 
-        this.Position.Set(pPos.x,pPos.y);
+        this.SetPosition(pPos);
         frpos = 0;
     }
 
@@ -25,7 +25,7 @@ public class Claw : KinematicBody2D
     {
         AnimatedSprite.Play("default");
         frpos = frpos + 1;
-        if (frpos >= 25) {
+        if (frpos >= 24) {
             AnimatedSprite.Stop();
         }
     }
