@@ -52,6 +52,7 @@
     <Compile Include="assets\bullet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="scripts\Bullet.cs" />
+    <Compile Include="scripts\Claw.cs" />
     <Compile Include="scripts\Conversation.cs" />
     <Compile Include="scripts\Global.cs" />
     <Compile Include="scripts\GuiltBar.cs" />
